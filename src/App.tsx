@@ -1,14 +1,16 @@
 import React from 'react';
-
+import Button, {ButtonType, ButtonSize} from './components/Button/button' 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello World</h1>
-        <h2>Hello World</h2>
-        <h3>Hello World</h3>
-        <h4>Hello World</h4>
+        <Button>Hello</Button>
+        <Button disabled={true}>Hello</Button>
+        <Button onClick={() => alert('success')} btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello</Button>
+        <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>Hello</Button>
+        <Button href='www.baidu.com' btnType={ButtonType.Link} disabled>Hello</Button>
+        <Button href='www.baidu.com' btnType={ButtonType.Link}>Baidu Link</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
