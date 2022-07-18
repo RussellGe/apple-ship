@@ -1,10 +1,11 @@
 import React from 'react';
-import Button, {ButtonType, ButtonSize} from './components/Button/button' 
-
+// import Button, {ButtonType, ButtonSize} from './components/Button/button' 
+import Menu from './components/Menu/menu';
+import MenuItem from './components/Menu/menuItem';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <Button>Hello</Button>
         <Button disabled={true}>Hello</Button>
         <Button onClick={() => alert('success')} btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello</Button>
@@ -22,7 +23,18 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <Menu defaultIndex={1} onSelect={(index) => console.log(index)}>
+        <MenuItem index={0}>
+          123
+        </MenuItem>
+        <MenuItem disabled index={1}>
+          12312312
+        </MenuItem> 
+        <MenuItem index={2}>
+          12312312
+        </MenuItem> 
+      </Menu>
     </div>
   );
 }
